@@ -1,0 +1,7 @@
+# Testnumbat IDE
+**/node_modules
+**/output/**
+**/testnet/**
+**/wallets/**
+**/moapy.data-storage.json
+**/*.interaction.json

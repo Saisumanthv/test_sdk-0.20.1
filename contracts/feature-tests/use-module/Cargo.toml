@@ -1,0 +1,53 @@
+[package]
+name = "use-module"
+version = "0.0.0"
+authors = ["Test Author"]
+edition = "2018"
+publish = false
+
+[lib]
+path = "src/use_module.rs"
+
+[features]
+wasm-output-mode = [
+    "testnumbat-wasm-node",
+    "testnumbat-wasm-module-dns/wasm-output-mode",
+    "testnumbat-wasm-module-dcdt/wasm-output-mode",
+    "testnumbat-wasm-module-features/wasm-output-mode",
+    "testnumbat-wasm-module-governance/wasm-output-mode",
+    "testnumbat-wasm-module-pause/wasm-output-mode",
+]
+
+[dependencies.testnumbat-wasm-module-dns]
+version = "0.0.2"
+path = "../../modules/testnumbat-wasm-module-dns"
+
+[dependencies.testnumbat-wasm-module-dcdt]
+version = "0.0.2"
+path = "../../modules/testnumbat-wasm-module-dcdt"
+
+[dependencies.testnumbat-wasm-module-features]
+version = "0.0.2"
+path = "../../modules/testnumbat-wasm-module-features"
+
+[dependencies.testnumbat-wasm-module-governance]
+version = "0.0.2"
+path = "../../modules/testnumbat-wasm-module-governance"
+
+[dependencies.testnumbat-wasm-module-pause]
+version = "0.0.2"
+path = "../../modules/testnumbat-wasm-module-pause"
+
+[dependencies.testnumbat-wasm]
+version = "0.0.2"
+path = "../../../testnumbat-wasm"
+features = ["derive"]
+
+[dependencies.testnumbat-wasm-node]
+version = "0.0.2"
+path = "../../../testnumbat-wasm-node"
+optional = true
+
+[dev-dependencies.testnumbat-wasm-debug]
+version = "0.0.2"
+path = "../../../testnumbat-wasm-debug"
